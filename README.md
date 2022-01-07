@@ -69,7 +69,7 @@ So, for now, I leave `JAVA_HOME` untouched. It defaults to NixOS's system-wide J
 
 ## Gesture Capture Tool
 
-Needs a different JDK and is hence wrapped in a nix-shell
+Needs a different JDK (JDK11) and is hence wrapped in a nix-shell
 
 Downloads automatically, invoke with
 
