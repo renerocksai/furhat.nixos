@@ -47,6 +47,9 @@ Then start the launcher with:
 ./launch_furhat_sdk.sh
 ```
 
+Note: the launcher is wrapped in a `nix-shell` called `sdk.nix`, to provide the GSettings schemas required by the gtk3
+filechooser used for choosing skills.
+
 The first time, you will be prompted to install the actual SDK. Enter your SDK key and continue. This will install
 everything into `.furhat/`
 
