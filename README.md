@@ -18,7 +18,8 @@ In your `configuration.nix`, prepare for the Furhat SDK:
     appimage-run
 
     # ...
-  };
+
+  ];
 
 
   # furhat SDK needs jdk
