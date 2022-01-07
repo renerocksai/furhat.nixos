@@ -1,5 +1,7 @@
 # Furhat Stuff
 
+This is my collection of configs and tools for using the Furhat SDK on NixOS with the i3 window manager.
+
 ## NixOS Prerequisites
 
 In your `configuration.nix`, prepare for the Furhat SDK:
