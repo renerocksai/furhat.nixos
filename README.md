@@ -2,6 +2,42 @@
 
 This is my collection of configs and tools for using the Furhat SDK on NixOS with the i3 window manager.
 
+## Update
+
+I enabled my NVIDIA on NixOS 22.05 and the electron app doesn't start anymore.
+
+```console
+➜ ./launch_furhat_sdk.sh
+furhat-sdk-desktop-launcher.AppImage installed in /home/rs/.cache/appimage-run/7c524ce81c6c063fa57a95fa38c7e25b28923d3d2e33018c13a9ea03faca65d9
+(node:38851) electron: The default of contextIsolation is deprecated and will be changing from false to true in a future release of Electron.  See https://github.com/electron/electron/issues/23506 for more information
+[38851:0729/133606.358419:FATAL:gpu_data_manager_impl_private.cc(445)] GPU process isn't usable. Goodbye.
+```
+
+However, I can still run the **already installed** SDK, ignoring the launcher:
+
+```console
+cd ~/.furhat/launcher/SDK/2.3.0
+steam-run bin/furhatos &
+```
+
+I can then open the web interface to control everything:
+
+```console
+xdg-open http://localhost:8080
+```
+
+Hence, see [newsdk.sh](./newsdk.sh) for how I work with the SDK now.
+
+I start a skill like this, usually from my `Makefile`:
+
+```
+java -cp ./build/libs/my-awesome-sill-all.skill furhatos.skills.Skill
+```
+
+### Upgrading the SDK
+
+Well, I'll urge Furhat to make the standalone SDK available again for download, like it is described in their docs.
+
 ## NixOS Prerequisites
 
 In your `configuration.nix`, prepare for the Furhat SDK:
