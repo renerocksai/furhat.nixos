@@ -33,12 +33,15 @@
       }
     },
     "flake-utils": {
+      "inputs": {
+        "systems": "systems"
+      },
       "locked": {
-        "lastModified": 1678901627,
-        "narHash": "sha256-U02riOqrKKzwjsxc/400XnElV+UtPUQWpANPlyazjH0=",
+        "lastModified": 1681037374,
+        "narHash": "sha256-XL6X3VGbEFJZDUouv2xpKg2Aljzu/etPLv5e1FPt1q0=",
         "owner": "numtide",
         "repo": "flake-utils",
-        "rev": "93a2b84fc4b70d9e089d029deacc3583435c2ed6",
+        "rev": "033b9f258ca96a10e543d4442071f614dc3f8412",
         "type": "github"
       },
       "original": {
@@ -113,11 +116,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1680433552,
-        "narHash": "sha256-FLFsVm/wS5rSaWRX9bJt4DBzeH3/p6KSaY2toPDDyl8=",
+        "lastModified": 1681154110,
+        "narHash": "sha256-OQwWzlzAY1dCqgSsgZzsPIOGmX4pBGaoXOy0rSl4b5Y=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "4228ba604fc8513e451b59196789cb62b834dec1",
+        "rev": "115a96e2ac1e92937cd47c30e073e16dcaaf6247",
         "type": "github"
       },
       "original": {
@@ -152,6 +155,21 @@
         "zig": "zig"
       }
     },
+    "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
     "zig": {
       "inputs": {
         "flake-compat": "flake-compat_2",
@@ -159,11 +177,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1680308637,
-        "narHash": "sha256-gas/Oo1hYbYOHzr1TBoHGH1mEzMMlPIdosb3yt573c0=",
+        "lastModified": 1681128475,
+        "narHash": "sha256-2Z6ZIpbUwSnomY2JH5fXxf27AeOnd+A4M2SX42dzY3Y=",
         "owner": "mitchellh",
         "repo": "zig-overlay",
-        "rev": "0d01cdde8c66b2b49cb30f8b52f11237b1ae5f6f",
+        "rev": "59d8cd5654a271ad7ba6169574ffc0bcc4344663",
         "type": "github"
       },
       "original": {
