@@ -99,7 +99,12 @@
           ];
 
           text = ''
-            appimage-run SDK/*.AppImage
+
+            if [ -f ./SDK/furhat-sdk-desktop-launcher.AppImage ] ; then
+                appimage-run SDK/*.AppImage
+            else
+                appimage-run ~/code/github.com/renerocksai/furnat.nixos/SDK/*.AppImage
+            fi
           '';
         };
 
@@ -113,7 +118,11 @@
           ];
 
           text = ''
-            nixGL appimage-run SDK/*.AppImage
+            if [ -f ./SDK/furhat-sdk-desktop-launcher.AppImage ] ; then
+                nixGL appimage-run SDK/*.AppImage
+            else
+                nixGL appimage-run ~/code/github.com/renerocksai/furnat.nixos/SDK/*.AppImage
+            fi
           '';
         };
 
