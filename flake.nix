@@ -2,11 +2,8 @@
   description = "slides dev shell";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/release-22.11";
+    nixpkgs.url = "github:nixos/nixpkgs/release-23.05";
     flake-utils.url = "github:numtide/flake-utils";
-
-    # required for latest zig
-    zig.url = "github:mitchellh/zig-overlay";
 
     # for chromeos etc
     nixgl.url = "github:guibou/nixGL";
@@ -27,10 +24,8 @@
   } @ inputs: let
     overlays = [ nixgl.overlay ];
 
-    # Our supported systems are the same supported systems as the Zig binaries
-    systems = builtins.attrNames inputs.zig.packages;
   in
-    flake-utils.lib.eachSystem systems (
+    flake-utils.lib.eachDefaultSystem (
       system: let
         pkgs = import nixpkgs {inherit overlays system; };
       in rec {
